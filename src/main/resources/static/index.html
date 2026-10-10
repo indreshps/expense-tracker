@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Expense Tracker</h1>
+        <p>Manage your money, track your spending.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Dashboard Summary -->
+        <section class="summary-section">
+
+            <div class="summary-card">
+                <h3>Total Expenses</h3>
+                <p id="totalExpenses">₹0.00</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Total Categories</h3>
+                <p id="totalCategories">0</p>
+            </div>
+
+        </section>
+
+        <!-- Add Expense Form -->
+        <section class="card">
+
+            <h2>Add New Expense</h2>
+
+            <form id="expenseForm">
+
+                <div class="form-group">
+                    <label for="amount">Amount (₹)</label>
+                    <input
+                        type="number"
+                        id="amount"
+                        name="amount"
+                        min="0.01"
+                        step="0.01"
+                        placeholder="Enter amount"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <input
+                        type="text"
+                        id="category"
+                        name="category"
+                        placeholder="e.g. Food, Travel"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input
+                        type="text"
+                        id="description"
+                        name="description"
+                        placeholder="What did you spend on?"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="">Select payment method</option>
+                        <option value="Cash">Cash</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Card">Card</option>
+                        <option value="Net Banking">Net Banking</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitButton">
+                    Add Expense
+                </button>
+
+            </form>
+
+            <p id="formMessage" role="status"></p>
+
+        </section>
+
+        <!-- Expense History -->
+        <section class="card">
+
+            <h2>Expense History</h2>
+
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by category or description">
+
+                <button type="button" id="searchButton">
+                    Search
+                </button>
+
+                <button type="button" id="resetButton">
+                    Show All
+                </button>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Amount</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Payment Method</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="expenseTableBody">
+                        <tr>
+                            <td colspan="7">Loading expenses...</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Category Summary -->
+        <section class="card">
+
+            <h2>Category-wise Summary</h2>
+
+            <div id="categorySummary">
+                Loading category summary...
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Expense Tracker V3 | Built with Java, Spring Boot, MySQL and JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
