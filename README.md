@@ -92,8 +92,8 @@ Before running the project, install:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/indreshps5/Expense-Tracker.git
-cd Expense-Tracker
+git clone https://github.com/indreshps5/expense-tracker.git
+cd expense-tracker
 ```
 
 ### 2. Create the Database
