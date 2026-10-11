@@ -136,6 +136,23 @@ Once the application starts, open:
 
 http://localhost:8080/
 
+## ☁️ Deployment
+
+The app is deployed on Railway, with the Spring Boot app and the MySQL database as two services in one project.
+
+The app reads its database settings from environment variables:
+
+| Variable | Purpose |
+|---|---|
+| DB_URL | JDBC connection URL for the database |
+| DB_USERNAME | Database username |
+| DB_PASSWORD | Database password |
+| PORT | Server port (set automatically by Railway) |
+
+If DB_URL and DB_USERNAME are not set, the app falls back to a local MySQL database at localhost:3306/expense_tracker with user root.
+
+Every push to the main branch triggers an automatic redeploy on Railway.
+
 ## 🔌 REST API
 
 The backend exposes REST endpoints for managing expenses.
