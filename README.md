@@ -4,6 +4,12 @@ A full-stack Expense Tracker application built using Java, Spring Boot, MySQL, H
 
 The application allows users to manage their daily expenses through a web interface, with expense data stored in a MySQL database.
 
+## 🌐 Live Demo
+
+Try the deployed app here: [expense-tracker-production-5356.up.railway.app](https://expense-tracker-production-5356.up.railway.app)
+
+Hosted on Railway (Spring Boot app + MySQL database).
+
 ## ✨ Features
 
 - ➕ Add new expenses
