@@ -92,7 +92,7 @@ Before running the project, install:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/indreshps5/expense-tracker.git
+git clone https://github.com/indreshps/expense-tracker.git
 cd expense-tracker
 ```
 
@@ -199,6 +199,6 @@ This project demonstrates practical implementation of:
 
 **Indresh Pratap Singh**
 
-GitHub: [@indreshps5](https://github.com/indreshps5)
+GitHub: [@indreshps](https://github.com/indreshps)
 
 ⭐ If you find this project useful, consider giving the repository a star!
